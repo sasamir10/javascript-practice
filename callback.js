@@ -162,7 +162,7 @@ processArray([10, 20, 30], printNumber); */
 
 // level-3
 // p-1 - Greet With an Inline Callback
-const processName = (name, callback) => {
+/* const processName = (name, callback) => {
     return callback(name);
 };
 
@@ -217,10 +217,10 @@ const mul = calculate(6, 4, (num1, num2) => {
 
 console.log(add);
 console.log(sub);
-console.log(mul);
+console.log(mul); */
 
 // p-5 - Process Every Array Item
-const processArray = (arr, callback) => {
+/* const processArray = (arr, callback) => {
     return callback(arr);
 };
 
@@ -228,4 +228,22 @@ const arrPrint = processArray([10, 20, 30], (arr) => {
     for (let number of arr) {
         // BUJHTESINA..will be back
     }
+}); */
+
+/* const processNumber = (number, callback) => {
+    return callback(number);
+};
+
+const result = processNumber(5, (num) => {
+    return num * 2;
 });
+
+console.log(result); */
+
+const processArray = (arr, callback) => {
+    for (let number of arr) {
+        callback(number);
+    }
+};
+
+const result = processArray([10, 20, 30], (number) => {});
