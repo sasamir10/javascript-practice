@@ -240,10 +240,121 @@ const result = processNumber(5, (num) => {
 
 console.log(result); */
 
-const processArray = (arr, callback) => {
-    for (let number of arr) {
-        callback(number);
-    }
+// Triple Every Number
+/* const sumFunction = (x, y) => {
+    return x + y;
 };
 
-const result = processArray([10, 20, 30], (number) => {});
+const myFunction = (a, b, callback) => {
+    return callback(a, b);
+};
+
+console.log(sumFunction(12, 9, myFunction)); */
+/* const arrFunction = (number) => {
+    return number * 3;
+};
+
+const myFunction = (numbers, callback) => {
+    const result = [];
+
+    for (let number of numbers) {
+        result.push(callback(number));
+    }
+
+    return result;
+};
+
+const result = myFunction([1, 5, 2], arrFunction);
+
+console.log(result); */
+
+/* const arrFunction = (number) => {
+    return number;
+};
+
+const myFunction = (numbers, callback) => {
+    const result = [];
+
+    for (let number of numbers) {
+        result.push(callback(number));
+    }
+
+    return result;
+};
+
+console.log(myFunction([34, 76, 89], arrFunction)); */
+
+// p-2
+const arrayFunction = (name) => {
+    return name.toUpperCase();
+};
+
+const myFunction = (names, callback) => {
+    const result = [];
+
+    for (let name of names) {
+        result.push(callback(name));
+    }
+
+    return result;
+};
+
+console.log(myFunction(["samir", "hridy"], arrayFunction));
+
+// p-3
+const arrayFunction = (number) => {
+    return number > 0;
+};
+
+const myFunction = (numbers, callback) => {
+    const result = [];
+
+    for (let number of numbers) {
+        result.push(callback(number));
+    }
+
+    return result;
+};
+
+console.log(myFunction([5, -2, 8], arrayFunction));
+
+// p-4
+const doubleFunction = (number) => {
+    return number * 2;
+};
+
+const squareFunction = (number) => {
+    return number * number;
+};
+
+const myFunction = (numbers, callback) => {
+    const result = [];
+
+    for (let number of numbers) {
+        result.push(callback(number));
+    }
+
+    return result;
+};
+
+console.log(myFunction([4, 8, 2], doubleFunction));
+console.log(myFunction([4, 8, 2], squareFunction));
+
+// p-5
+const arrrayFunction = (number) => {
+    return number;
+};
+
+const myFunction = (numbers, callback) => {
+    const result = [];
+
+    for (let number of numbers) {
+        if (number % 2 === 0) {
+            result.push(callback(number));
+        }
+    }
+
+    return result;
+};
+
+console.log(myFunction([10, 15, 22, 31], arrrayFunction));
