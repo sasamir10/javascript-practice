@@ -285,7 +285,7 @@ const myFunction = (numbers, callback) => {
 console.log(myFunction([34, 76, 89], arrFunction)); */
 
 // p-2
-const arrayFunction = (name) => {
+/* const arrayFunction = (name) => {
     return name.toUpperCase();
 };
 
@@ -338,23 +338,41 @@ const myFunction = (numbers, callback) => {
 };
 
 console.log(myFunction([4, 8, 2], doubleFunction));
-console.log(myFunction([4, 8, 2], squareFunction));
+console.log(myFunction([4, 8, 2], squareFunction)); */
 
 // p-5
-const arrrayFunction = (number) => {
-    return number;
+/* const arrrayFunction = (number) => {
+    return number % 2 === 0;
 };
 
 const myFunction = (numbers, callback) => {
     const result = [];
 
     for (let number of numbers) {
-        if (number % 2 === 0) {
-            result.push(callback(number));
+        if (callback(number)) {
+            result.push(number);
         }
     }
 
     return result;
 };
 
-console.log(myFunction([10, 15, 22, 31], arrrayFunction));
+console.log(myFunction([10, 15, 22, 31], arrrayFunction)); */
+
+const arrayFunction = (number) => {
+    return number % 2 === 0;
+};
+
+const myFunction = (numbers, callback) => {
+    const result = [];
+
+    for (let number of numbers) {
+        if (callback(number)) {
+            result.push(number);
+        }
+    }
+
+    return result;
+};
+
+console.log(myFunction([89, 36, -29, 30, 12, 16, 19], arrayFunction));
