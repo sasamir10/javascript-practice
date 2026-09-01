@@ -359,8 +359,9 @@ const myFunction = (numbers, callback) => {
 
 console.log(myFunction([10, 15, 22, 31], arrrayFunction)); */
 
+// p1
 const arrayFunction = (number) => {
-    return number % 2 === 0;
+    return number > 0;
 };
 
 const myFunction = (numbers, callback) => {
@@ -376,3 +377,41 @@ const myFunction = (numbers, callback) => {
 };
 
 console.log(myFunction([89, 36, -29, 30, 12, 16, 19], arrayFunction));
+
+// p2
+const arrayFunction = (name) => {
+    return name.length >= 5;
+};
+
+const myFunction = (names, callback) => {
+    const result = [];
+
+    for (let name of names) {
+        if (callback(name)) {
+            result.push(name);
+        }
+    }
+
+    return result;
+};
+
+console.log(myFunction(["Sam", "Samir", "Rahim", "Jo"], arrayFunction));
+
+// p3
+const arrayFunction = (number) => {
+    return number > 20;
+};
+
+const myFunction = (numbers, callback) => {
+    const result = [];
+
+    for (let number of numbers) {
+        if (callback(number)) {
+            result.push(number);
+        }
+    }
+
+    return result;
+};
+
+console.log(myFunction([10, 25, 30, 5], arrayFunction));
