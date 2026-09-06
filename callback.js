@@ -7,18 +7,7 @@ const runFunction = (callback) => {
     return callback();
 };
 
-console.log(runFunction(sayHello)); */
-
-// p-1
-/* const sayHello = () => {
-    return "Hello";
-};
-
-const runCallback = (callback) => {
-    return callback();
-};
-
-console.log(runCallback(sayHello));
+console.log(runFunction(sayHello));
 
 // p-2
 const greetUser = (name) => {
@@ -85,8 +74,7 @@ const calculateNumbers = (a, b, callback) => {
 };
 
 console.log(calculateNumbers(10, 5, add));
-console.log(calculateNumbers(10, 5, multiply));
- */
+console.log(calculateNumbers(10, 5, multiply)); */
 
 // level-2
 //p-1 - Format a Name
@@ -131,21 +119,6 @@ const calculatePrice = (price, callBack) => {
 console.log(calculatePrice(1000, tenPercentDiscount));
 console.log(calculatePrice(1000, twentyPercentDiscount));
 
-// p-4 - Two Numbers + Result Checker
-const addNumbers = (a, b) => {
-    return a + b;
-};
-
-const multiplyNumbers = (a, b) => {
-    return a * b;
-};
-
-const processNumbers = (a, b, callback) => {
-    return callback(a, b);
-};
-
-console.log(processNumbers(8, 4, addNumbers));
-console.log(processNumbers(8, 4, multiplyNumbers));
 
 // p-5 - Callback Inside a Loop
 const printNumber = (number) => {
@@ -360,7 +333,7 @@ const myFunction = (numbers, callback) => {
 console.log(myFunction([10, 15, 22, 31], arrrayFunction)); */
 
 // p1
-const arrayFunction = (number) => {
+/* const arrayFunction = (number) => {
     return number > 0;
 };
 
@@ -414,4 +387,28 @@ const myFunction = (numbers, callback) => {
     return result;
 };
 
-console.log(myFunction([10, 25, 30, 5], arrayFunction));
+console.log(myFunction([10, 25, 30, 5], arrayFunction)); */
+
+/* const greet = (name) => {
+    return 
+}; */
+
+const runFunction = (name, callback) => {
+    return callback(name);
+};
+
+const result = runFunction("Samir", (name) => {
+    return `Hello ${name}`;
+});
+
+console.log(result);
+
+/* const processName = (name, callback) => {
+    return callback(name);
+};
+
+const callbackResult = processName("Samir", (names) => {
+    return `Hello ${names}`;
+});
+ */
+// console.log(callbackResult);
