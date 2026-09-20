@@ -1,5 +1,5 @@
 // Problem 1 — Double the numbers
-/* const numbers = [34, 56, 89, 90, 12, 65, 40, 50];
+const numbers = [34, 56, 89, 90, 12, 65, 40, 50];
 
 const doubled = numbers.map((number) => {
     return number * 2;
@@ -14,7 +14,7 @@ const upperCase = names.map((name) => {
     return name.toUpperCase();
 });
 
-console.log(upperCase); 
+console.log(upperCase);
 
 // Problem 3 — Get names from objects
 const users = [
@@ -27,7 +27,7 @@ const names = users.map((object) => {
     return object.name;
 });
 
-console.log(names); 
+console.log(names);
 
 // Problem 4 - Find the length of every name
 const names = ["Samir", "Rahim", "Karim", "Hasan"];
@@ -36,7 +36,7 @@ const nameLength = names.map((name) => {
     return name.length;
 });
 
-console.log(nameLength); 
+console.log(nameLength);
 
 // Problem 5 - Get only the ages
 const users = [
@@ -49,7 +49,7 @@ const getAge = users.map((object) => {
     return object.age;
 });
 
-console.log(getAge); 
+console.log(getAge);
 
 // Problem 6 - Get Get product names
 const products = [
@@ -62,7 +62,7 @@ const productNames = products.map((object) => {
     return object.name;
 });
 
-console.log(productNames); 
+console.log(productNames);
 
 // Problem 7 - Add 100 to every product price
 const products = [
@@ -75,7 +75,7 @@ const finalPrice = products.map((object) => {
     return object.price + 100;
 });
 
-console.log(finalPrice); 
+console.log(finalPrice);
 
 // Problem 8 - Create a sentence from each user
 const users = [
@@ -88,7 +88,7 @@ const sentence = users.map((object) => {
     return `${object.name} is ${object.age} years old`;
 });
 
-console.log(sentence); 
+console.log(sentence);
 
 // Problem 9 - Increase every student's marks by 10
 const students = [
@@ -101,7 +101,7 @@ const finalMarks = students.map((object) => {
     return object.marks + 10;
 });
 
-console.log(finalMarks); 
+console.log(finalMarks);
 
 // Problem 10 - Convert prices to strings with ৳
 const prices = [500, 1000, 1500];
@@ -110,7 +110,7 @@ const pricesTk = prices.map((price) => {
     return `৳${price}`;
 });
 
-console.log(pricesTk); */
+console.log(pricesTk);
 
 // Problem 11 - Create a new array of objects
 const users = [
