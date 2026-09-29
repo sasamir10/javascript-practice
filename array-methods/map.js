@@ -1,128 +1,137 @@
-// Problem 1 — Double the numbers
-const numbers = [34, 56, 89, 90, 12, 65, 40, 50];
+// p-1
+const number = [2, 5, 6, 9, 10];
 
-const doubled = numbers.map((number) => {
+const double = number.map((number) => {
     return number * 2;
 });
 
-console.log(doubled);
+console.log(double);
 
-// Problem 2 — Convert names to uppercase
-const names = ["samir", "rahim", "karim", "hasan"];
+// p-2
+const names = ["samir", "maya", "leo"];
 
-const upperCase = names.map((name) => {
+const uppercaseNames = names.map((name) => {
     return name.toUpperCase();
 });
 
-console.log(upperCase);
+console.log(uppercaseNames);
 
-// Problem 3 — Get names from objects
-const users = [
-    { name: "Samir", age: 25 },
-    { name: "Rahim", age: 22 },
-    { name: "Karim", age: 28 },
+// p-3
+const prices = [15, 25, 40];
+
+const fixedPrices = prices.map((price) => {
+    return price + 10;
+});
+
+console.log(fixedPrices);
+
+// p-4
+const temperatures = [0, 20, 30];
+
+const toFahrenheit = temperatures.map((temp) => {
+    return (temp * 9) / 5 + 32;
+});
+
+console.log(toFahrenheit);
+
+// p-5
+const person = [
+    { first: "Ava", last: "Khan" },
+    { first: "Noah", last: "Ali" },
 ];
 
-const names = users.map((object) => {
-    return object.name;
+const fullName = person.map((name) => {
+    return `${name.first} ${name.last}`;
 });
 
-console.log(names);
+console.log(fullName);
 
-// Problem 4 - Find the length of every name
-const names = ["Samir", "Rahim", "Karim", "Hasan"];
-
-const nameLength = names.map((name) => {
-    return name.length;
-});
-
-console.log(nameLength);
-
-// Problem 5 - Get only the ages
-const users = [
-    { name: "Samir", age: 25 },
-    { name: "Rahim", age: 22 },
-    { name: "Karim", age: 21 },
+// p-6
+const product = [
+    { name: "Pen", price: 1.5 },
+    { name: "Book", price: 12 },
 ];
 
-const getAge = users.map((object) => {
-    return object.age;
-});
-
-console.log(getAge);
-
-// Problem 6 - Get Get product names
-const products = [
-    { name: "Mouse", price: 800 },
-    { name: "Keyboard", price: 1500 },
-    { name: "Monitor", price: 12000 },
-];
-
-const productNames = products.map((object) => {
-    return object.name;
-});
-
-console.log(productNames);
-
-// Problem 7 - Add 100 to every product price
-const products = [
-    { name: "Mouse", price: 800 },
-    { name: "Keyboard", price: 1500 },
-    { name: "Monitor", price: 12000 },
-];
-
-const finalPrice = products.map((object) => {
-    return object.price + 100;
-});
-
-console.log(finalPrice);
-
-// Problem 8 - Create a sentence from each user
-const users = [
-    { name: "Samir", age: 25 },
-    { name: "Rahim", age: 22 },
-    { name: "Karim", age: 28 },
-];
-
-const sentence = users.map((object) => {
-    return `${object.name} is ${object.age} years old`;
-});
-
-console.log(sentence);
-
-// Problem 9 - Increase every student's marks by 10
-const students = [
-    { name: "Samir", marks: 70 },
-    { name: "Rahim", marks: 80 },
-    { name: "Karim", marks: 65 },
-];
-
-const finalMarks = students.map((object) => {
-    return object.marks + 10;
-});
-
-console.log(finalMarks);
-
-// Problem 10 - Convert prices to strings with ৳
-const prices = [500, 1000, 1500];
-
-const pricesTk = prices.map((price) => {
-    return `৳${price}`;
-});
-
-console.log(pricesTk);
-
-// Problem 11 - Create a new array of objects
-const users = [
-    { name: "Samir", age: 25 },
-    { name: "Rahim", age: 12 },
-];
-
-const newObject = users.map((object) => {
+const productDetails = product.map((product) => {
     return {
-        name: object.name,
-        isAdult: object.age > 18,
+        name: product.name,
+        price: "$" + product.price.toFixed(2),
     };
 });
 
-console.log(newObject);
+console.log(productDetails);
+
+// p-7
+const arrays = [
+    [1, 2],
+    [3, 4, 5],
+];
+
+const newArrays = arrays.map((innerArray) => {
+    return innerArray.map((num) => {
+        return num + 1;
+    });
+});
+
+console.log(newArrays);
+
+// p-8
+const userDetails = [
+    { name: "Mina", age: 20 },
+    { name: "Rafi", age: 16 },
+];
+
+const userStatus = userDetails.map((person) => {
+    return {
+        name: person.name,
+        status: person.age >= 18 ? "adult" : "minor",
+    };
+});
+
+console.log(userStatus);
+
+// p-9
+const order = [
+    {
+        id: 1,
+        items: [
+            { quantity: 2, price: 5 },
+            { quantity: 1, price: 8 },
+        ],
+    },
+];
+
+const lineTotals = order.map((order) => {
+    return {
+        id: order.id,
+        items: order.items,
+        lineTotals: order.items.map((item) => {
+            return item.quantity * item.price;
+        }),
+    };
+});
+
+console.log(lineTotals);
+
+// p-10
+const users = [
+    {
+        id: 1,
+        name: "  Maya Khan ",
+        active: "yes",
+        tags: ["STUDENT", "Art"],
+    },
+];
+
+const userRecords = users.map((user) => {
+    return {
+        id: user.id,
+        displayName: user.name.trim().toUpperCase(),
+        isActive: user.active === "yes" ? true : false,
+        tags: user.tags.map((tag) => {
+            return tag.toLowerCase();
+        }),
+    };
+});
+
+console.log(userRecords);
