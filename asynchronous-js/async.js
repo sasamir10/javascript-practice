@@ -1,18 +1,19 @@
-/* console.log("Start");
+console.log("Start");
 
 setTimeout(() => {
-    console.log("Finished");
+    console.log("First");
+
+    setTimeout(() => {
+        console.log("Second");
+    }, 1000);
 }, 3000);
 
 console.log("End");
-console.log("Lets play some Asynchronous game");
- */
 
-console.log("start");
+console.log("Past");
 
 setTimeout(() => {
-    console.log("Finished");
-}, 6000);
+    console.log("Present");
+}, 0);
 
-console.log("End");
-console.log("Lets play some Asynchronous game");
+console.log("Future");
