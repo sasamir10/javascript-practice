@@ -1,5 +1,10 @@
-const myFunction = () => {
-    console.log("Hello JS, Plz standout infront of me in easy way");
+const person = {};
+
+person.name = "Samir";
+person.passion = "Programming";
+
+person.dream = () => {
+    console.log("Explore the whole world");
 };
 
-console.log(typeof myFunction);
+console.log(person.dream());
