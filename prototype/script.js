@@ -1,10 +1,16 @@
-const person = {};
-
-person.name = "Samir";
-person.passion = "Programming";
-
-person.dream = () => {
-    console.log("Explore the whole world");
+const virat = {
+    name: "GOAT",
+    technique() {
+        console.log("All time great");
+    },
 };
 
-console.log(person.dream());
+const rohit = {
+    name: "King",
+    technique() {
+        console.log("Mumbai chaa Raja");
+    },
+};
+
+virat.technique();
+rohit.technique();
