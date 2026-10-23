@@ -6,11 +6,14 @@ const sMethod = {
 
 const rohit = Object.create(sMethod);
 
-rohit.technique();
+// rohit.technique();
 
 /* ---------------------------------- */
 
 const animal = {
+    name1: "kutta",
+    name2: "Bilai",
+    name3: "Makichu",
     eat() {
         console.log("Eating...");
     },
@@ -18,8 +21,6 @@ const animal = {
 
 const dog = Object.create(animal);
 
-dog.breed = "Labrador";
-
-console.log(dog.breed);
 dog.eat();
-console.log(dog.sleep);
+console.log(dog.name1);
+console.log(dog.name3);
